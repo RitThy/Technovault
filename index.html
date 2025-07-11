@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TRF CAMBODIA</title>
+    <meta
+      name="description"
+      content="Easily allow users to install Ble jammer."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark light" />
+    
+    
+    <style>
+      /* រចនាប័ទ្ម Hacker/Cyber ទំនើប */
+:root {
+  --primary-color: #0af;
+  --secondary-color: #0f0;
+  --bg-color: #111;
+  --text-color: #0f0;
+  --accent-color: #ff00aa;
+  --terminal-bg: #000;
+  --terminal-border: #0af;
+  --glow-effect: 0 0 10px var(--primary-color);
+}
+
+body {
+  font-family: 'Courier New', monospace, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 170, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 0, 170, 0.1) 0%, transparent 20%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ផ្កាយធ្លាក់ */
+@keyframes falling {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: falling linear infinite;
+  opacity: 0;
+}
+
+/* បង្កើតផ្កាយចៃដន្យ */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--terminal-border);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  text-shadow: var(--glow-effect);
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 5px;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-top: 1.5em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin-top: 2em;
+  font-size: 1.8em;
+}
+
+h3 {
+  margin-top: 1.5em;
+  font-size: 1.4em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+esp-web-install-button[install-unsupported] {
+  visibility: inherit;
+}
+
+.content pre {
+  max-width: 100%;
+  overflow-y: scroll;
+  background-color: var(--terminal-bg);
+  padding: 15px;
+  border: 1px solid var(--terminal-border);
+  border-radius: 5px;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  box-shadow: inset 0 0 10px rgba(0, 170, 255, 0.3);
+}
+
+.footer {
+  margin-top: 24px;
+  border-top: 1px solid var(--terminal-border);
+  padding-top: 24px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.footer .initiative {
+  font-style: italic;
+  margin-top: 16px;
+  color: var(--secondary-color);
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--terminal-border);
+  margin: 20px 0;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--terminal-border);
+}
+
+th {
+  background-color: rgba(0, 170, 255, 0.2);
+  padding: 12px;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.radios li {
+  list-style: none;
+  line-height: 2em;
+  padding-left: 20px;
+  position: relative;
+}
+
+.radios li::before {
+  content: ">";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+/* រចនាប័ទ្មដែលមានចរនា */
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(0, 255, 0, 0.3);
+  animation: scan 8s linear infinite;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+    </style>
+    <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
+  </head>
+  <body>
+    <div class="content">
+      <h1>BlUETOOTH Jammer Flasher</h1>
+      <p>Choose your hardware</p>
+      <ul class="radios">
+        <li>
+          <label><input type="radio" name="type" value="Ble1" /> Single Nrf24l01 Vspi (SCK = 18, MISO =19, MOSI = 23 ,CS =21 ,CE = 22)</label>
+        </li>
+        <li>
+          <label><input type="radio" name="type" value="Ble2" /> Dual Nrf24l01 Vspi and Hspi pins</label>
+        </li>
+		<li>
+          <label><input type="radio" name="type" value="Ble3" /> Single Nrf24l01 Hspi (SCK = 14, MISO = 12, MOSI = 13, CS = 15 , CE = 16)</label>
+        </li>
+     
+      </ul>
+      <p class="button-row" align="center">
+        <esp-web-install-button class="invisible"></esp-web-install-button>
+      </p>
+
+      <div class="footer">
+	  ✨ <a href="https://github.com/A-Rithy" 
+          >GCASH</a
+        > &mdash;
+		
+  
+       You can donate <a href="Bluetooth-jammer-esp32-main/youtube_7N8BPIjuZe8_1920x1080_h264.mp4">Video</a> 🛠️
+    </div>
+    <script>
+	
+      document.querySelectorAll('input[name="type"]').forEach(radio =>
+        radio.addEventListener("change", () => {
+          const button = document.querySelector('esp-web-install-button');
+          button.manifest = `web/manifest_${radio.value}.json`;
+          button.classList.remove('invisible');
+        }
+      ));
+      
+    </script>
+  </body>
+</html>
